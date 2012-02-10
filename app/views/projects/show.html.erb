@@ -1,1 +1,13 @@
-<h2><%= @project.name %></h2>
+# <% @title = "TextMate 2 - Projects - Biletari" %>
+
+# <% title(@project.name, "Projects") %>
+
+# <h2><%= @project.name %></h2>
+
+<title>
+  <% if content_for?(:title) %>
+    <%= yield(:title) %>
+  <% else %>
+    Biletari
+  <% end %>
+</title>
